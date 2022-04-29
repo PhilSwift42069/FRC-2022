@@ -55,6 +55,9 @@ import java.util.concurrent.TimeUnit;
  */
 public class Robot extends TimedRobot {
 
+  //Controllers
+  private Joystick joystick;
+
   /*drive motors*/
   private WPI_TalonFX[] leftDrive = new WPI_TalonFX[2];
   private WPI_TalonFX[] rightDrive = new WPI_TalonFX[2];
@@ -69,15 +72,16 @@ public class Robot extends TimedRobot {
   private DifferentialDrive chassis;
 
   //Motor IDs
-  private final int RIGHT_DRIVE_BACK = 1;
-  private final int RIGHT_DRIVE_FRONT = 2;
-  private final int LEFT_DRIVE_BACK = 3;
-  private final int LEFT_DRIVE_FRONT = 4;
+  private final int RIGHT_DRIVE_BACK = 12;
+  private final int RIGHT_DRIVE_FRONT = 13;
+  private final int LEFT_DRIVE_BACK = 2;
+  private final int LEFT_DRIVE_FRONT = 3;
 
   //JoyStickAxis
   private final int FOREWARD_BACKWARD_AXIS = 1;
   private final int LEFT_RIGHT_AXIS = 2;
   private final int DRIVING_SPEED = 3;
+  
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -145,7 +149,8 @@ public class Robot extends TimedRobot {
 
   //ROBOT CONTROL METHODS (USER DEFINED)
   private void drive(){//drives the robot
-  //add the drive code here
+    void forward(1)
+  //ADD DRIVE CODE HERE
   //you will need to call this method in teleopPeriodic
   //use chassis.arcade drive
   //you can google the api for chassis.arcade drive to see how it is used
