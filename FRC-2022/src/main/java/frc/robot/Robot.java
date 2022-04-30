@@ -149,7 +149,8 @@ public class Robot extends TimedRobot {
 
   //ROBOT CONTROL METHODS (USER DEFINED)
   private void drive(){//drives the robot
-    void forward(1)
+    double topSpeed = 1;
+    chassis.arcadeDrive(-joystick.getRawAxis(FOREWARD_BACKWARD_AXIS) * topSpeed, joystick.getRawAxis(LEFT_RIGHT_AXIS) * 0.5); 
   //ADD DRIVE CODE HERE
   //you will need to call this method in teleopPeriodic
   //use chassis.arcade drive
