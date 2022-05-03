@@ -148,15 +148,11 @@ public class Robot extends TimedRobot {
   }
 
   //ROBOT CONTROL METHODS (USER DEFINED)
+  //DEFINE DRIVE CODE
   private void drive(){//drives the robot
     double topSpeed = 1;
+    System.out.println(joystick.getRawAxis(DRIVING_SPEED));
     chassis.arcadeDrive(-joystick.getRawAxis(FOREWARD_BACKWARD_AXIS) * topSpeed, joystick.getRawAxis(LEFT_RIGHT_AXIS) * 0.5); 
-  //ADD DRIVE CODE HERE
-  //you will need to call this method in teleopPeriodic
-  //use chassis.arcade drive
-  //you can google the api for chassis.arcade drive to see how it is used
-  //you will need both joystick axis passed in
-  //you will need to use joystick.getRawAxis(callFinalVariableStoringAxisNumberHere)
   }
 
   /** This function is called once when teleop is enabled. */
