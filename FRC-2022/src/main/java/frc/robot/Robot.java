@@ -59,8 +59,8 @@ public class Robot extends TimedRobot {
   private Joystick joystick;
 
   /*drive motors*/
-  private WPI_TalonFX[] leftDrive = new WPI_TalonFX[2];
-  private WPI_TalonFX[] rightDrive = new WPI_TalonFX[2];
+  private CANSparkMax[] leftDrive = new CANSparkMax[2];
+  private CANSparkMax[] rightDrive = new CANSparkMax[2];
 
   /////////////////////////
 
@@ -98,10 +98,10 @@ public class Robot extends TimedRobot {
     joystick = new Joystick(0);
 
     /*drivetrain*/
-    leftDrive[0] = new WPI_TalonFX(LEFT_DRIVE_BACK);
-    leftDrive[1] = new WPI_TalonFX(LEFT_DRIVE_FRONT);
-    rightDrive[0] = new WPI_TalonFX(RIGHT_DRIVE_BACK);
-    rightDrive[1] = new WPI_TalonFX(RIGHT_DRIVE_FRONT);
+    leftDrive[0] = new CANSparkMax(LEFT_DRIVE_BACK);
+    leftDrive[1] = new CANSparkMax(LEFT_DRIVE_FRONT);
+    rightDrive[0] = new CANSparkMax(RIGHT_DRIVE_BACK);
+    rightDrive[1] = new CANSparkMax(RIGHT_DRIVE_FRONT);
     leftDrive[0].configFactoryDefault();
     leftDrive[1].configFactoryDefault();
     rightDrive[0].configFactoryDefault();
